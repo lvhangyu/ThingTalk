@@ -3,7 +3,7 @@ package gen
 import (
 	"testing"
 
-	"Kratos-demo/pkg/db/mysql"
+	"github.com/lvhangyu/ThingTalk/pkg/db/mysql"
 	"gorm.io/gen"
 )
 

@@ -7,14 +7,14 @@
 package main
 
 import (
-	"Kratos-demo/app/user/internal/biz"
-	"Kratos-demo/app/user/internal/data"
-	"Kratos-demo/app/user/internal/server"
-	"Kratos-demo/app/user/internal/service"
-	"Kratos-demo/pkg/conf"
-	"Kratos-demo/pkg/grpc"
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/log"
+	"github.com/lvhangyu/ThingTalk/app/user/internal/biz"
+	"github.com/lvhangyu/ThingTalk/app/user/internal/data"
+	"github.com/lvhangyu/ThingTalk/app/user/internal/server"
+	"github.com/lvhangyu/ThingTalk/app/user/internal/service"
+	"github.com/lvhangyu/ThingTalk/pkg/conf"
+	"github.com/lvhangyu/ThingTalk/pkg/grpc"
 )
 
 import (

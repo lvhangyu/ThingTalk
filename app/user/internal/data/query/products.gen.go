@@ -16,7 +16,7 @@ import (
 
 	"gorm.io/plugin/dbresolver"
 
-	"Kratos-demo/app/user/internal/data/model"
+	"github.com/lvhangyu/ThingTalk/app/user/internal/data/model"
 )
 
 func newProduct(db *gorm.DB, opts ...gen.DOOption) product {

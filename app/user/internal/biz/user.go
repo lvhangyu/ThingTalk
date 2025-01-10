@@ -3,8 +3,8 @@ package biz
 import (
 	"context"
 
-	"Kratos-demo/pkg/grpc"
 	"github.com/go-kratos/kratos/v2/log"
+	"github.com/lvhangyu/ThingTalk/pkg/grpc"
 )
 
 // User is a User model.

@@ -1,11 +1,11 @@
 package data
 
 import (
-	"Kratos-demo/app/user/internal/data/query"
-	"Kratos-demo/pkg/conf"
-	"Kratos-demo/pkg/db/mysql"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/google/wire"
+	"github.com/lvhangyu/ThingTalk/app/user/internal/data/query"
+	"github.com/lvhangyu/ThingTalk/pkg/conf"
+	"github.com/lvhangyu/ThingTalk/pkg/db/mysql"
 	"gorm.io/gorm"
 )
 

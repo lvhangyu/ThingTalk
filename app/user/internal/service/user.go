@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"Kratos-demo/app/user/internal/biz"
-	v1 "Kratos-demo/pkg/pb/user/api/v1"
+	"github.com/lvhangyu/ThingTalk/app/user/internal/biz"
+	v1 "github.com/lvhangyu/ThingTalk/pkg/pb/user/api/v1"
 )
 
 // UserService is a User service.

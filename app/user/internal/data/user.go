@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"Kratos-demo/app/user/internal/biz"
-	"Kratos-demo/app/user/internal/data/model"
 	"github.com/go-kratos/kratos/v2/log"
+	"github.com/lvhangyu/ThingTalk/app/user/internal/biz"
+	"github.com/lvhangyu/ThingTalk/app/user/internal/data/model"
 )
 
 type userRepo struct {

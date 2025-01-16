@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v4.25.2
-// source: server/api/v1/server.proto
+// source: user/api/v1/user.proto
 
 package v1
 
@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	User_SayHello_FullMethodName = "/app.server.api.v1.User/SayHello"
-	User_Test_FullMethodName     = "/app.server.api.v1.User/Test"
+	User_SayHello_FullMethodName = "/app.user.api.v1.User/SayHello"
+	User_Test_FullMethodName     = "/app.user.api.v1.User/Test"
 )
 
 // UserClient is the client API for User service.
@@ -148,7 +148,7 @@ func _User_Test_Handler(srv interface{}, ctx context.Context, dec func(interface
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var User_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "app.server.api.v1.User",
+	ServiceName: "app.user.api.v1.User",
 	HandlerType: (*UserServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -161,5 +161,5 @@ var User_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "server/api/v1/server.proto",
+	Metadata: "user/api/v1/user.proto",
 }

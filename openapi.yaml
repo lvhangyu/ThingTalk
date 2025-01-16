@@ -3,8 +3,7 @@
 
 openapi: 3.0.3
 info:
-    title: User API
-    description: The greeting service definition.
+    title: ""
     version: 0.0.1
 paths:
     /helloworld/{name}:
@@ -46,6 +45,12 @@ paths:
                                 $ref: '#/components/schemas/app.user.api.v1.HelloReply'
 components:
     schemas:
+        app.device.api.v1.HelloReply:
+            type: object
+            properties:
+                message:
+                    type: string
+            description: The response message containing the greetings
         app.user.api.v1.HelloReply:
             type: object
             properties:
@@ -53,4 +58,7 @@ components:
                     type: string
             description: The response message containing the greetings
 tags:
+    - name: Device
+      description: The greeting service definition.
     - name: User
+      description: The greeting service definition.

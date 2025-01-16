@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-http v2.8.3
 // - protoc             v4.25.2
-// source: server/api/v1/server.proto
+// source: user/api/v1/user.proto
 
 package v1
 
@@ -19,8 +19,8 @@ var _ = binding.EncodeURL
 
 const _ = http.SupportPackageIsVersion1
 
-const OperationUserSayHello = "/app.server.api.v1.User/SayHello"
-const OperationUserTest = "/app.server.api.v1.User/Test"
+const OperationUserSayHello = "/app.user.api.v1.User/SayHello"
+const OperationUserTest = "/app.user.api.v1.User/Test"
 
 type UserHTTPServer interface {
 	// SayHello Sends a greeting
@@ -30,11 +30,11 @@ type UserHTTPServer interface {
 
 func RegisterUserHTTPServer(s *http.Server, srv UserHTTPServer) {
 	r := s.Route("/")
-	r.GET("/helloworld/{name}", _User_SayHello0_HTTP_Handler(srv))
-	r.GET("/test/{name}", _User_Test0_HTTP_Handler(srv))
+	r.GET("/helloworld/{name}", _User_SayHello1_HTTP_Handler(srv))
+	r.GET("/test/{name}", _User_Test1_HTTP_Handler(srv))
 }
 
-func _User_SayHello0_HTTP_Handler(srv UserHTTPServer) func(ctx http.Context) error {
+func _User_SayHello1_HTTP_Handler(srv UserHTTPServer) func(ctx http.Context) error {
 	return func(ctx http.Context) error {
 		var in HelloRequest
 		if err := ctx.BindQuery(&in); err != nil {
@@ -56,7 +56,7 @@ func _User_SayHello0_HTTP_Handler(srv UserHTTPServer) func(ctx http.Context) err
 	}
 }
 
-func _User_Test0_HTTP_Handler(srv UserHTTPServer) func(ctx http.Context) error {
+func _User_Test1_HTTP_Handler(srv UserHTTPServer) func(ctx http.Context) error {
 	return func(ctx http.Context) error {
 		var in HelloRequest
 		if err := ctx.BindQuery(&in); err != nil {

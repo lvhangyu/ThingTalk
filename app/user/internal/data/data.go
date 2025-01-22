@@ -6,6 +6,9 @@ import (
 	"github.com/lvhangyu/ThingTalk/app/user/internal/data/query"
 	"github.com/lvhangyu/ThingTalk/pkg/conf"
 	"github.com/lvhangyu/ThingTalk/pkg/db/mysql"
+	"github.com/redis/go-redis/v9"
+
+	rdb "github.com/lvhangyu/ThingTalk/pkg/db/redis"
 	"gorm.io/gorm"
 )
 
@@ -14,7 +17,8 @@ var ProviderSet = wire.NewSet(NewData, NewUserRepo)
 
 // Data .
 type Data struct {
-	db *gorm.DB
+	db  *gorm.DB
+	rdb *redis.Client
 }
 
 // NewData .
@@ -26,7 +30,10 @@ func NewData(c *conf.Data, logger log.Logger) (*Data, func(), error) {
 	db := mysql.Init(c.Database.Source)
 	query.SetDefault(db)
 
+	rdb := rdb.Init(c.Redis.Addr, "", 0)
+
 	return &Data{
-		db: db,
+		db:  db,
+		rdb: rdb,
 	}, cleanup, nil
 }

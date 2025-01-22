@@ -1,2 +1,2 @@
-# ThingTalk 通用物联网产品
+# kratos 单仓模式 , 项目示例
 
